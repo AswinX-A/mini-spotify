@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🔥 My Music App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="center">
+<h2>🎧 Music App</h2>
+
+<input id="username" placeholder="Name"><br>
+<input id="email" placeholder="Email"><br>
+<input id="mobile" placeholder="Mobile Number"><br>
+<input id="password" type="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+<p id="error"></p>
+</div>
+
+<!-- LANGUAGE -->
+<div id="languagePage" class="hidden center">
+<h2>Select Language</h2>
+
+<button onclick="selectLang('Tamil')">Tamil</button>
+<button onclick="selectLang('English')">English</button>
+<button onclick="selectLang('Hindi')">Hindi</button>
+</div>
+
+<!-- SINGER -->
+<div id="singerPage" class="hidden center">
+<h2>Select Singer</h2>
+
+<div class="grid">
+
+<div onclick="selectSinger('Anirudh')">
+<img src="images/singers/singer1.jpg"><p>Anirudh</p>
+</div>
+
+<div onclick="selectSinger('AR Rahman')">
+<img src="images/singers/singer2.jpg"><p>AR Rahman</p>
+</div>
+
+<div onclick="selectSinger('Yuvan')">
+<img src="images/singers/singer3.jpg"><p>Yuvan</p>
+</div>
+
+<div onclick="selectSinger('Sid Sriram')">
+<img src="images/singers/singer4.jpg"><p>Sid Sriram</p>
+</div>
+
+<div onclick="selectSinger('DSP')">
+<img src="images/singers/singer5.jpg"><p>DSP</p>
+</div>
+
+<div onclick="selectSinger('GV Prakash')">
+<img src="images/singers/singer6.jpg"><p>GV Prakash</p>
+</div>
+
+<div onclick="selectSinger('Harris')">
+<img src="images/singers/singer7.jpg"><p>Harris</p>
+</div>
+
+<div onclick="selectSinger('HipHop')">
+<img src="images/singers/singer8.jpg"><p>HipHop</p>
+</div>
+
+<div onclick="selectSinger('Ilayaraja')">
+<img src="images/singers/singer9.jpg"><p>Ilayaraja</p>
+</div>
+
+<div onclick="selectSinger('Santhosh')">
+<img src="images/singers/singer10.jpg"><p>Santhosh</p>
+</div>
+
+</div>
+</div>
+
+<!-- MUSIC -->
+<div id="musicPage" class="hidden">
+
+<h2>🔥 Welcome <span id="user"></span></h2>
+<h3>Language: <span id="lang"></span></h3>
+<h3>Singer: <span id="singer"></span></h3>
+
+<input id="search" placeholder="Search song..." onkeyup="searchSong()">
+
+<div id="songs" class="grid"></div>
+
+<!-- PLAYER -->
+<div class="player">
+
+<img id="cover">
+<h3 id="title"></h3>
+
+<audio id="audio"></audio>
+<input type="range" id="progress">
+
+<div>
+<button onclick="prev()">⏮</button>
+<button onclick="toggle()">⏯</button>
+<button onclick="next()">⏭</button>
+<button onclick="shuffle()">🔀</button>
+</div>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
